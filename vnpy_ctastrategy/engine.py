@@ -719,7 +719,7 @@ class CtaEngine(BaseEngine):
             return
 
         self.call_strategy_func(strategy, strategy.on_start)
-        strategy.trading = True
+        strategy.trading = strategy.inited
 
         self.put_strategy_event(strategy)
 
